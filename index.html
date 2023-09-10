@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="images/pobrane.png">
+    <meta property="og:image" content="images/pobrane.png">
+    <script defer src="js/script.js"></script>
+    <link href="css/flex.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&family=Oswald:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="container__header">Lista zadań</h1>
+    </div>
+    <div class="container">
+        <div class="container__item">
+            <h2>Dodaj nowe zadanie</h2>
+        </div>
+        <div class="container__item">
+            <form class="js-form form">
+                <input class="form__input js-newTask" type="text" placeholder="Co jest do zrobienia ?">
+                <button class="form__button">Dodaj zadanie</button>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <div class="container__item">
+            <h2>Lista zadań</h2>
+        </div>
+        <div class="container__item">
+            <ul class="js-tasks container__list"></ul>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
+

@@ -1,0 +1,29 @@
+.form__input {
+    flex-basis: 60%;
+    flex-grow: 1;
+    padding: 10px;
+    margin: 10px 10px 10px 10px ;
+    min-width: 185px
+}
+
+.form__input:focus {
+    border: 2px solid #000000;
+}
+
+.form__button {
+    margin: 10px 10px 10px 10px ;
+    flex-grow: 2;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: teal;
+    color: white;
+    flex-basis: 30%;
+    border: none;
+    min-width: 185px
+}
+
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

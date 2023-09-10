@@ -1,0 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #eee;
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
