@@ -20,8 +20,7 @@ This website provides to do list. Can also be used on a mobile phone. It is very
 - JavaScript
 
 ## Gif
-![currencyConverter1]
-(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXA3YjJoZ2Rpcjhtd3hkbnc1NDdpZG0ydTdxbTBnZTc2eXYzZG5hOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l8igLUC1PhtG21Sa86/giphy.gif)
+![currencyConverter1](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMXA3YjJoZ2Rpcjhtd3hkbnc1NDdpZG0ydTdxbTBnZTc2eXYzZG5hOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l8igLUC1PhtG21Sa86/giphy.gif)
 
 ## Project Status
 Project is in progress and it is the result of learning programming.
