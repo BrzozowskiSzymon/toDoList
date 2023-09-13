@@ -32,6 +32,22 @@
     align-items: center;
 }
 
+.list__button:hover {
+    background-color: rgb(0, 157, 0);
+}
+
+.list__button:active {
+    background-color: rgb(0, 186, 0);
+}
+
 .list__button--remove {
-    background-color: red;
+    background-color: rgb(212, 19, 19);
+}
+
+.list__button--remove:hover {
+    background-color: rgb(230, 11, 11);
+}
+
+.list__button--remove:active {
+    background-color: rgb(255, 0, 0);
 }
