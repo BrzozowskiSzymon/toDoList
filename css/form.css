@@ -4,12 +4,6 @@
     grid-gap: 20px;
 }
 
-@media (max-width:767px) {
-.form {
-    grid-template-columns: 1fr;
-}
-}
-
 .form__input {
     padding: 10px;
     border: 1px solid #ddd;
@@ -24,10 +18,12 @@
     background-color: teal;
     color: white;
     border: none;
+    transition: 0.3s;
 }
 
 .form__button:hover {
     background-color: rgb(0, 155, 155);
+    transform: scale(1.05);
 }
 
 .form__button:active {

@@ -8,9 +8,9 @@
     <link rel="icon" href="images/pobrane.png">
     <meta property="og:image" content="images/pobrane.png">
     <script defer src="js/script.js"></script>
-    <link href="css/flex.css" rel="stylesheet">
     <link href="css/container.css" rel="stylesheet">
     <link href="css/form.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/list.css" rel="stylesheet">
     <link href="css/section.css" rel="stylesheet">
@@ -42,9 +42,17 @@
         </section>
 
         <section class="section">
-            <h2 class="section__header">
-                Lista zadań
-            </h2>
+            <header class="section__header">
+                <h2 class="section__title">
+                    Lista zadań
+                </h2>
+                <div class="buttons js-buttons">
+                </div>
+            </header>
+            <div class="section__body">
+                <span class="js-buttons section__button">
+                </span>
+            </div>
             <div class="section__body">
                 <ul class="js-tasks list"></ul>
             </div>

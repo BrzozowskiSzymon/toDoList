@@ -14,6 +14,10 @@
     word-break: break-word;
 }
 
+.list__items--hidden {
+    display: none;
+}
+
 
 .list__item--done {
     word-break: break-word;
@@ -26,6 +30,8 @@
     background-color: green;
     color:white;
     border: none;
+    transition: background 0.3s;
+    padding: 0;
 }
 
 .list__button:hover {
