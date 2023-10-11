@@ -1,6 +1,6 @@
 # To Do list
 The subject of the project is a To Do List. The list allows you to add new tasks to do.
-<br>Here is a working live Demo -> [CLICK HERE](https://boozyboss.github.io/toDoList/)
+<br>Here is a working live Demo -> [CLICK HERE](https://brzozowskiszymon.github.io/toDoList/)
  
 ## Table of Contents
 * [Description](#description)
