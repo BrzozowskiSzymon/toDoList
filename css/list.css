@@ -14,7 +14,7 @@
     word-break: break-word;
 }
 
-.list__items--hidden {
+.list__item--hidden {
     display: none;
 }
 
