@@ -2,22 +2,17 @@
     let tasks = [];
     let hideDoneTasks = false;
 
-    const removeTask = (taskIndex) => {
-        tasks = [
-            ...tasks.slice(0, taskIndex),
-            ...tasks.slice(taskIndex + 1)];
+    const removeTask = (index) => {
+        tasks = tasks.filter((_, taskIndex) => taskIndex !== index);
         render();
     };
 
-    const toggleTaskDone = (taskIndex) => {
-        tasks = [
-            ...tasks.slice(0, taskIndex),
-            { ...tasks[taskIndex],
-                 done: !tasks[taskIndex].done },
-            ...tasks.slice(taskIndex + 1),
-        ];
+    const toggleTaskDone = (index) => {
+        tasks = tasks.map((task, taskIndex) =>
+            taskIndex === index ? { ...task, done: !task.done } : task
+        );
         render();
-    }
+    };
 
     const addNewTask = (newTaskContent) => {
         tasks = [...tasks, { content: newTaskContent }];
@@ -31,11 +26,11 @@
         }));
         render();
     };
-    
+
     const showOrHideDoneTasks = () => {
         hideDoneTasks = !hideDoneTasks;
         render();
-      };
+    };
 
 
     const bindEvents = () => {
@@ -61,23 +56,17 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li 
-                type="none" 
-                class="list__items
-                ${task.done && hideDoneTasks ? "list__item--hidden" : ""}">
-                <button 
-                class="js-done list__button">
-                ${task.done ? "✔" : ""}
-                </button>
-                <span 
-                class="list__item${task.done ? " list__item--done" : ""}">
-                ${task.content}
-                </span> 
-                <button 
-                class="js-remove list__button list__button--remove">
-                🗑
-                </button>
-            </li>
+        <li type="none" class="list__items
+            ${task.done && hideDoneTasks ? " list__item--hidden" : ""}">
+            <button class="js-done list__button">
+            ${task.done ? "✔" : ""}
+            </button>
+            <span class="list__item${task.done ? " list__item--done" : ""}">
+            ${task.content}
+            </span>
+            <button class="js-remove list__button list__button--remove">🗑
+            </button>
+        </li>
             `;
 
         }
@@ -92,33 +81,34 @@
 
     const renderButtons = () => {
         const buttonsElement = document.querySelector(".js-buttons");
-      
-        if (tasks.length > 0) {
-          buttonsElement.innerHTML = `<button class="js-toggleShowHide buttons__button">${
-            hideDoneTasks ? "Pokaż" : "Ukryj"
-          } ukończone</button>
-          <button class="js-allDoneTask buttons__button" ${
-            tasks.every(({ done }) => done) ? "disabled" : ""
-          } >Ukończ wszystkie</button>`;
-        } else {
-          buttonsElement.innerHTML = ``;
-        }
-      };
 
-      const bindToggleDoneEvents = () => {
-  
+        if (tasks.length > 0) {
+            buttonsElement.innerHTML = `
+            <button class="js-toggleShowHide buttons__button">${hideDoneTasks ? "Pokaż" : "Ukryj"
+                } ukończone
+            </button>
+            <button class="js-allDoneTask buttons__button" ${tasks.every(({ done }) => done) ? "disabled" : ""
+                } >Ukończ wszystkie
+            </button>`;
+        } else {
+            buttonsElement.innerHTML = ``;
+        }
+    };
+
+    const bindToggleDoneEvents = () => {
+
         const toggleShowHideButton = document.querySelector(".js-toggleShowHide");
-      
+
         if (toggleShowHideButton) {
-          toggleShowHideButton.addEventListener("click", showOrHideDoneTasks);
+            toggleShowHideButton.addEventListener("click", showOrHideDoneTasks);
         };
-      
+
         const markAllTasksDoneButton = document.querySelector(".js-allDoneTask");
-      
+
         if (markAllTasksDoneButton) {
-          markAllTasksDoneButton.addEventListener("click", markAllDone);
+            markAllTasksDoneButton.addEventListener("click", markAllDone);
         };
-      };
+    };
 
 
 
